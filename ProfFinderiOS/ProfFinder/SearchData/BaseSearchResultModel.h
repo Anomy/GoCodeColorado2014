@@ -12,13 +12,14 @@
 #define NAME_KEY @"name"
 #define DEPARTMENT_NAME_KEY @"department_name"
 #define WEBSITE_URL_KEY @"website_url"
-
+#define HILIGHTS_KEY @"hilights"
 
 @interface BaseSearchResultModel : NSObject
 @property (nonatomic, strong) NSString *imageURL;
 @property (nonatomic, strong) UIImage *image;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *departmentName;
+@property (nonatomic, strong) NSAttributedString *hilightsblurb;
 @property (nonatomic, strong) NSString *websiteURL;
 
 - (id)initWithDict:(NSDictionary*) dict;
