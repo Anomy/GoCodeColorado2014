@@ -25,6 +25,11 @@
 		89618A6618DDF45100CF9F62 /* Go-Co.png in Resources */ = {isa = PBXBuildFile; fileRef = 89618A6518DDF45100CF9F62 /* Go-Co.png */; };
 		89618A6918DDF70600CF9F62 /* checked_checkbox_128.png in Resources */ = {isa = PBXBuildFile; fileRef = 89618A6718DDF70600CF9F62 /* checked_checkbox_128.png */; };
 		89618A6A18DDF70600CF9F62 /* unchecked_checkbox_128.png in Resources */ = {isa = PBXBuildFile; fileRef = 89618A6818DDF70600CF9F62 /* unchecked_checkbox_128.png */; };
+		897A1DC118DE0CA400E0D7D9 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 897A1DC018DE0CA400E0D7D9 /* SearchViewController.m */; };
+		897A1DD718DE0F4700E0D7D9 /* BaseSearchResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 897A1DD018DE0F4700E0D7D9 /* BaseSearchResultModel.m */; };
+		897A1DD818DE0F4700E0D7D9 /* FacultySearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 897A1DD218DE0F4700E0D7D9 /* FacultySearchResult.m */; };
+		897A1DD918DE0F4700E0D7D9 /* FairSearchResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 897A1DD418DE0F4700E0D7D9 /* FairSearchResultModel.m */; };
+		897A1DDA18DE0F4700E0D7D9 /* SearchResultsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 897A1DD618DE0F4700E0D7D9 /* SearchResultsManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +66,16 @@
 		89618A6518DDF45100CF9F62 /* Go-Co.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Go-Co.png"; sourceTree = "<group>"; };
 		89618A6718DDF70600CF9F62 /* checked_checkbox_128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked_checkbox_128.png; sourceTree = "<group>"; };
 		89618A6818DDF70600CF9F62 /* unchecked_checkbox_128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked_checkbox_128.png; sourceTree = "<group>"; };
+		897A1DBF18DE0CA400E0D7D9 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = ../SearchViewController.h; sourceTree = "<group>"; };
+		897A1DC018DE0CA400E0D7D9 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = ../SearchViewController.m; sourceTree = "<group>"; };
+		897A1DCF18DE0F4700E0D7D9 /* BaseSearchResultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseSearchResultModel.h; sourceTree = "<group>"; };
+		897A1DD018DE0F4700E0D7D9 /* BaseSearchResultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseSearchResultModel.m; sourceTree = "<group>"; };
+		897A1DD118DE0F4700E0D7D9 /* FacultySearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacultySearchResult.h; sourceTree = "<group>"; };
+		897A1DD218DE0F4700E0D7D9 /* FacultySearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacultySearchResult.m; sourceTree = "<group>"; };
+		897A1DD318DE0F4700E0D7D9 /* FairSearchResultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FairSearchResultModel.h; sourceTree = "<group>"; };
+		897A1DD418DE0F4700E0D7D9 /* FairSearchResultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FairSearchResultModel.m; sourceTree = "<group>"; };
+		897A1DD518DE0F4700E0D7D9 /* SearchResultsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsManager.h; sourceTree = "<group>"; };
+		897A1DD618DE0F4700E0D7D9 /* SearchResultsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +136,7 @@
 		89618A3218DDF0F700CF9F62 /* ProfFinder */ = {
 			isa = PBXGroup;
 			children = (
+				897A1DCE18DE0F4700E0D7D9 /* SearchData */,
 				89618A3B18DDF0F700CF9F62 /* AppDelegate.h */,
 				89618A3C18DDF0F700CF9F62 /* AppDelegate.m */,
 				89618A3E18DDF0F700CF9F62 /* Main_iPhone.storyboard */,
@@ -171,6 +187,23 @@
 			);
 			name = Images;
 			path = ProfFinder/Images;
+			sourceTree = "<group>";
+		};
+		897A1DCE18DE0F4700E0D7D9 /* SearchData */ = {
+			isa = PBXGroup;
+			children = (
+				897A1DBF18DE0CA400E0D7D9 /* SearchViewController.h */,
+				897A1DC018DE0CA400E0D7D9 /* SearchViewController.m */,
+				897A1DD518DE0F4700E0D7D9 /* SearchResultsManager.h */,
+				897A1DD618DE0F4700E0D7D9 /* SearchResultsManager.m */,
+				897A1DCF18DE0F4700E0D7D9 /* BaseSearchResultModel.h */,
+				897A1DD018DE0F4700E0D7D9 /* BaseSearchResultModel.m */,
+				897A1DD118DE0F4700E0D7D9 /* FacultySearchResult.h */,
+				897A1DD218DE0F4700E0D7D9 /* FacultySearchResult.m */,
+				897A1DD318DE0F4700E0D7D9 /* FairSearchResultModel.h */,
+				897A1DD418DE0F4700E0D7D9 /* FairSearchResultModel.m */,
+			);
+			path = SearchData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +309,11 @@
 			files = (
 				89618A4618DDF0F700CF9F62 /* ViewController.m in Sources */,
 				89618A3D18DDF0F700CF9F62 /* AppDelegate.m in Sources */,
+				897A1DD918DE0F4700E0D7D9 /* FairSearchResultModel.m in Sources */,
+				897A1DC118DE0CA400E0D7D9 /* SearchViewController.m in Sources */,
+				897A1DDA18DE0F4700E0D7D9 /* SearchResultsManager.m in Sources */,
+				897A1DD818DE0F4700E0D7D9 /* FacultySearchResult.m in Sources */,
+				897A1DD718DE0F4700E0D7D9 /* BaseSearchResultModel.m in Sources */,
 				89618A3918DDF0F700CF9F62 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,6 +529,7 @@
 				89618A6018DDF0F700CF9F62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89618A6118DDF0F700CF9F62 /* Build configuration list for PBXNativeTarget "ProfFinderTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +538,7 @@
 				89618A6318DDF0F700CF9F62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
