@@ -30,6 +30,7 @@
 		897A1DD818DE0F4700E0D7D9 /* FacultySearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 897A1DD218DE0F4700E0D7D9 /* FacultySearchResult.m */; };
 		897A1DD918DE0F4700E0D7D9 /* FairSearchResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 897A1DD418DE0F4700E0D7D9 /* FairSearchResultModel.m */; };
 		897A1DDA18DE0F4700E0D7D9 /* SearchResultsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 897A1DD618DE0F4700E0D7D9 /* SearchResultsManager.m */; };
+		897A1DDD18DE1E6E00E0D7D9 /* UserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 897A1DDC18DE1E6E00E0D7D9 /* UserDefaults.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,8 @@
 		897A1DD418DE0F4700E0D7D9 /* FairSearchResultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FairSearchResultModel.m; sourceTree = "<group>"; };
 		897A1DD518DE0F4700E0D7D9 /* SearchResultsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsManager.h; sourceTree = "<group>"; };
 		897A1DD618DE0F4700E0D7D9 /* SearchResultsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsManager.m; sourceTree = "<group>"; };
+		897A1DDB18DE1E6E00E0D7D9 /* UserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaults.h; sourceTree = "<group>"; };
+		897A1DDC18DE1E6E00E0D7D9 /* UserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaults.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				897A1DCE18DE0F4700E0D7D9 /* SearchData */,
+				897A1DDB18DE1E6E00E0D7D9 /* UserDefaults.h */,
+				897A1DDC18DE1E6E00E0D7D9 /* UserDefaults.m */,
 				89618A3B18DDF0F700CF9F62 /* AppDelegate.h */,
 				89618A3C18DDF0F700CF9F62 /* AppDelegate.m */,
 				89618A3E18DDF0F700CF9F62 /* Main_iPhone.storyboard */,
@@ -308,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89618A4618DDF0F700CF9F62 /* ViewController.m in Sources */,
+				897A1DDD18DE1E6E00E0D7D9 /* UserDefaults.m in Sources */,
 				89618A3D18DDF0F700CF9F62 /* AppDelegate.m in Sources */,
 				897A1DD918DE0F4700E0D7D9 /* FairSearchResultModel.m in Sources */,
 				897A1DC118DE0CA400E0D7D9 /* SearchViewController.m in Sources */,

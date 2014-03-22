@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface SearchResultsManager : NSObject
-@property (nonatomic, strong) NSArray *searchResults;
+@property (nonatomic, strong) NSMutableArray *searchResults;
 @end

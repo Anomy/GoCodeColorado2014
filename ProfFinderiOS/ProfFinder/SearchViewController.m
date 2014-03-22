@@ -10,6 +10,17 @@
 #import "SearchResultsManager.h"
 #import "BaseSearchResultModel.h"
 
+#define FACULTY_INDEX 0
+#define CAREER_FAIR_INDEX 1
+
+typedef enum {
+    CELL_VIEW = 100,
+    IMAGE_VIEW, //101
+    NAME_LABEL, //102
+    WEBSITE_LABEL, //103
+    DEPARTMENT_LABEL, //104
+} UIVIEW_TAGS;
+
 @interface SearchViewController ()
 //Outlets
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
@@ -40,10 +51,7 @@
     
     //Load Data
     self.facultyData = [[SearchResultsManager alloc] init];
-    self.facultyData.searchResults = [NSArray arrayWithObjects:@"Prof 1", @"Prof 2", @"Prof 3", nil];
-    
     self.fairData = [[SearchResultsManager alloc] init];
-    self.fairData.searchResults = [NSArray arrayWithObjects:@"Fair 1", @"Fair 2", @"Fair 3 3", nil];
     
     [self.tableView reloadData];
 }
@@ -64,15 +72,43 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *simpleTableIdentifier = @"BaseCell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    UITableViewCell *cell = nil;
+    switch (self.segmentedControl.selectedSegmentIndex) {
+        case FACULTY_INDEX: {
+            cell = [tableView dequeueReusableCellWithIdentifier:@"FacultyCell"];
+            break;
+        }
+        case CAREER_FAIR_INDEX: {
+            cell = [tableView dequeueReusableCellWithIdentifier:@"CareerFairCell"];
+            break;
+        }
+        default:
+            break;
     }
     
-    cell.textLabel.text = [[self getCurrentlySelectedData].searchResults objectAtIndex:indexPath.row];
+    SearchResultsManager *searchResults = [self getCurrentlySelectedData];
+    BaseSearchResultModel *model = [searchResults.searchResults objectAtIndex:[indexPath row]];
+    
+    UIImageView *profileImage = (UIImageView *)[cell viewWithTag:IMAGE_VIEW];
+    if (!model.image) {
+        NSURL *url = [NSURL URLWithString:model.imageURL];
+        [BaseSearchResultModel loadFromURL:url callback:^(UIImage *callbackImage) {
+            model.image = callbackImage;
+            profileImage.image = model.image;
+        }];
+    } else {
+        profileImage.image = model.image;
+    }
+    
+    UILabel *nameLabel = (UILabel *)[cell viewWithTag:NAME_LABEL];
+    nameLabel.text = model.name;
+
+    UILabel *webLinkButton = (UILabel *)[cell viewWithTag:WEBSITE_LABEL];
+    webLinkButton.text = model.websiteURL;
+
+    UILabel *departmentLabel = (UILabel *)[cell viewWithTag:DEPARTMENT_LABEL];
+    departmentLabel.text = model.departmentName;
+
     return cell;
 }
 
@@ -81,11 +117,11 @@
 - (SearchResultsManager*) getCurrentlySelectedData {
     SearchResultsManager *selectedDataSource = nil;
     switch (self.segmentedControl.selectedSegmentIndex) {
-        case 0: {
+        case FACULTY_INDEX: {
             selectedDataSource = self.facultyData;
             break;
         }
-        case 1: {
+        case CAREER_FAIR_INDEX: {
             selectedDataSource = self.fairData;
             break;
         }
@@ -95,12 +131,29 @@
     return selectedDataSource;
 }
 
-
 #pragma mark - TableViewDelegate
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     SearchResultsManager *selectedDataSource = [self getCurrentlySelectedData];
     return selectedDataSource.searchResults.count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = nil;
+    switch (self.segmentedControl.selectedSegmentIndex) {
+        case FACULTY_INDEX: {
+            cell = [tableView dequeueReusableCellWithIdentifier:@"FacultyCell"];
+            break;
+        }
+        case CAREER_FAIR_INDEX: {
+            cell = [tableView dequeueReusableCellWithIdentifier:@"CareerFairCell"];
+            break;
+        }
+        default:
+            return 20;
+            break;
+    }
+    return cell.frame.size.height;
 }
 
 #pragma mark - Navigation
