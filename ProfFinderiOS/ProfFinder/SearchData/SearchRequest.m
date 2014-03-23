@@ -13,23 +13,26 @@
 #define SECRET @"1mEqgu13Ry6KzlbmoRNcSQ=="
 
 #define API_URL @"https://api.datalanche.com/rpedela.gocodecolorado/query"
-#define LIMIT 10
+#define LIMIT 5
 
+/*
 @implementation SearchRequest
 
-- (id) init {
+- (id) initWtihSearchType:(SearchType)searchType {
     self = [super init];
     if (self) {
-        _parsedSearchResults = [[SearchResults alloc] init];
-        [self jsonTapped:nil];
+        self.parsedSearchResults = [[SearchResults alloc] init];
     }
     return self;
 }
-
-
-- (void) jsonTapped:(id)sender
-{    
-    NSString *params = [self getSerializedDict];
+*/
+/*
+- (void) makeRequestWithSearchTerm:(NSString*)searchCriteria
+{
+    [self.parsedSearchResults.rows removeAllObjects];
+    
+    
+    NSString *params = [self getSerializedDict:searchCriteria];
     NSData *postData = [params dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
@@ -45,40 +48,54 @@
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request setHTTPBody:postData];
 
-    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    [connection start];
+    self.connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    [self.connection start];
 
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-    NSLog(@"RESPONSE:%@", response);
+    if (self.connection == connection) {
+        NSLog(@"RESPONSE:%@", response);
+    }
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-    NSLog(@"DATA:%@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
-    NSError *error;
-    NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data options: kNilOptions error:&error];
-    NSArray *rows = [json objectForKey:@"rows"];
-    NSMutableArray *tempMutableRows = [[NSMutableArray alloc] initWithCapacity:0];
-    for (NSDictionary *dict in rows) {
-        SingleRow *aRow = [[SingleRow alloc] initWithDict:dict];
-        [tempMutableRows addObject:aRow];
+    if (self.connection == connection) {
+        
+        NSError *error;
+        NSLog(@"data:%@", data);
+        NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data options: kNilOptions error:&error];
+        NSLog(@"json:%@", json);
+        NSArray *rows = [json objectForKey:@"rows"];
+        NSLog(@"rows:%@", rows);
+        
+        for (NSDictionary *dict in rows) {
+            SingleRow *aRow = [[SingleRow alloc] initWithDict:dict];
+            [self.parsedSearchResults.rows addObject:aRow];
+        }
+        NSLog(@"self.parsedSearchResults.rows:%@", self.parsedSearchResults.rows);
     }
-    self.parsedSearchResults.rows = tempMutableRows;
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"SearchResultsUpdated" object:self];
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    NSLog(@"CONNECTION FINISHED");
+    if (self.connection == connection) {
+        NSLog(@"CONNECTION FINISHED");
+        [self postNotif];
+    }
 }
+
+-(void) postNotif {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"SearchResultsUpdated" object:self];
+}
+
 
 #pragma mark - serialize
 
-- (NSString*) getSerializedDict {
-    return [self serialzedDictionary:[self parameters]];
+- (NSString*) getSerializedDict:(NSString*) searchCriteria {
+    return [self serialzedDictionary:[self parameters:searchCriteria]];
 }
 
-- (NSDictionary*) parameters {
+- (NSDictionary*) parameters:(NSString*) searchCriteria {
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithCapacity:0];
     NSMutableArray *select = [[NSMutableArray alloc] initWithCapacity:0];
     [select addObject:@"id"];
@@ -90,7 +107,7 @@
 
     [dict setObject:select forKey:@"select"];
     [dict setObject:@"cu_faculty_profiles" forKey:@"from"];
-    [dict setObject:@"reduced pressure" forKey:@"search"];
+    [dict setObject:searchCriteria forKey:@"search"];
     [dict setObject:[NSNumber numberWithInt:0] forKey:@"offset"];
     [dict setObject:[NSNumber numberWithInt:LIMIT] forKey:@"limit"];
     
@@ -145,18 +162,56 @@ static char *alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012
     
     return result;
 }
-
 @end
-
+ */
 
 @implementation SearchResults
 
--(id) init {
+-(id) initSearchType:(SearchType)searchType {
     self = [super init];
     if (self) {
-
+        if (searchType == Faculty) {
+            [self parseDict:[self getFacultyData]];
+        } else {
+            [self parseDict:[self getCareerFairData]];
+        }
     }
     return self;
+}
+
+-(void) parseDict:(NSDictionary*)dataToParse {
+    
+    _rows = [[NSMutableArray alloc] initWithCapacity:0];
+    NSArray *array = [NSArray arrayWithArray:[dataToParse objectForKey:@"rows"]];
+    for (NSDictionary *dict in array) {
+        SingleRow *aRow = [[SingleRow alloc] initWithDict:dict];
+        [_rows addObject:aRow];
+    }
+    _numRows = [NSString stringWithFormat:@"%d", _rows.count];
+}
+
+-(NSDictionary*) getCareerFairData {
+    NSString *textPath = [[NSBundle mainBundle] pathForResource:@"CareerFair" ofType:@"txt"];
+    NSError *error;
+    NSString *content = [NSString stringWithContentsOfFile:textPath encoding:NSUTF8StringEncoding error:&error];  //error checking omitted
+    
+    NSData *data = [content dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    
+    NSLog(@"CAREER FAIR:%@", jsonDict);
+    return jsonDict;
+}
+
+-(NSDictionary*) getFacultyData {
+    NSString *textPath = [[NSBundle mainBundle] pathForResource:@"Informatics" ofType:@"txt"];
+    NSError *error;
+    NSString *content = [NSString stringWithContentsOfFile:textPath encoding:NSUTF8StringEncoding error:&error];  //error checking omitted
+    
+    NSData *data = [content dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    
+    NSLog(@"Faculty:%@", jsonDict);
+    return jsonDict;
 }
 
 @end
@@ -174,19 +229,32 @@ static char *alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012
             NSDictionary *hilights = [dict objectForKey:@"_es_highlights"];
             NSArray *profileContent = [hilights objectForKey:@"profile_content"];
             if (hilights) {
-                NSMutableString *trimString = [NSMutableString stringWithString:[profileContent firstObject]];
-                [trimString replaceOccurrencesOfString:@"<strong>" withString:@"" options:0 range:NSMakeRange(0, [trimString length])];
-                [trimString replaceOccurrencesOfString:@"</strong>" withString:@"" options:0 range:NSMakeRange(0, [trimString length])];
-                _es_highlights = [[NSAttributedString alloc] initWithString:trimString];
+                NSString *baseString = [profileContent firstObject];
+                if (baseString) {
+                    NSMutableString *trimString = [NSMutableString stringWithString:baseString];
+                    [trimString replaceOccurrencesOfString:@"<strong>" withString:@"" options:0 range:NSMakeRange(0, [trimString length])];
+                    [trimString replaceOccurrencesOfString:@"</strong>" withString:@"" options:0 range:NSMakeRange(0, [trimString length])];
+                    _es_highlights = [self safeObjectForKey:dict withKey:@"career_center_link"];
+                }
             }
         }
+        _career_center_link =[self safeObjectForKey:dict withKey:@"career_center_link"];
+        _date = [self safeObjectForKey:dict withKey:@"date"];
+        _description = [self safeObjectForKey:dict withKey:@"description"];
+        _end_time = [self safeObjectForKey:dict withKey:@"end_time"];
+        _fair_name = [self safeObjectForKey:dict withKey:@"fair_name"];
+        _institution = [self safeObjectForKey:dict withKey:@"institution"];
+        _location = [self safeObjectForKey:dict withKey:@"location"];
+        _start_end = [self safeObjectForKey:dict withKey:@"start_end"];
+        
+        NSLog(@"dict:%@", dict);
     }
     return self;
 }
 
 -(NSString*) safeObjectForKey:(NSDictionary*) dict withKey:(NSString*)key {
     if (key) {
-        if ([[dict objectForKey:key] isKindOfClass:[NSString class]]) {
+        if (![[dict objectForKey:key] isKindOfClass:[NSNull class]]) {
             NSString *string = [dict objectForKey:key];
             if (string) {
                 if (string.length > 0) {
@@ -197,4 +265,5 @@ static char *alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012
     }
     return nil;
 }
+
 @end
