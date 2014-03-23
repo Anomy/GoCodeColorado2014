@@ -1,0 +1,105 @@
+{
+    "rows": [
+        {
+            "institution": "University of Northern Colorado",
+            "fair_name": "Spring Job & Internship Fair",
+            "date": "2014-02-20",
+            "start_end": "1:00 PM",
+            "end_time": "4:00 PM",
+            "location": "University Center Ballrooms",
+            "description": "All Majors!",
+            "career_center_link": "http://www.unco.edu/careers/"
+        },
+        {
+            "institution": "Colorado State University-Pueblo",
+            "fair_name": "Spring Career Fair",
+            "date": "2014-03-05",
+            "start_end": "11:00 AM",
+            "end_time": "3:00 PM",
+            "location": "Occhiato University Center Ballroom",
+            "description": "To register for any of our recruiting fairs (Career, Internship, Teacher Education), employers can complete the online registration at www.myinterfase.com/colostate-pueblo/employer, fax their registration to 719.549.2289 or contact the Career Center for more details.",
+            "career_center_link": "http://www.colostate-pueblo.edu/careercenter/Pages/default.aspx"
+        },
+        {
+            "institution": "Arapahoe Community College",
+            "fair_name": "2014 ANNUAL Career Fair",
+            "date": "2014-03-26",
+            "start_end": "11:00 AM",
+            "end_time": "2:00 PM",
+            "location": "Littleton Campus First Floor Dining Hall",
+            "description": null,
+            "career_center_link": "http://www.arapahoe.edu/student-resources/career-center/career-and-job-fairs"
+        },
+        {
+            "institution": "Metropolitan State University of Denver",
+            "fair_name": "2014 Spring Job Fair",
+            "date": "2014-04-03",
+            "start_end": "10:30 PM",
+            "end_time": "2:30 PM",
+            "location": "Tivoli Turnhalle Auraria Campus",
+            "description": "The MSU Denver Spring Job Fair is for all majors who are seeking full-time, part-time, summer jobs, or internships. Visit with 65+ employers with current job openings. To view list of employers and their job listings, log on to your JobLink account with your 900#.",
+            "career_center_link": "http://www.msudenver.edu/career/careerfairsevents/"
+        },
+        {
+            "institution": "Colorado State University",
+            "fair_name": "Teacher Job Fair",
+            "date": "2014-04-06",
+            "start_end": "10:00 AM",
+            "end_time": "6:00 PM",
+            "location": "Drake Event Center",
+            "description": "The Teacher Job Fair is an opportunity for Colorado School Districts and teacher candidates to discuss career options and employment opportunities. It is open ONLY to Colorado School Districts because of the limited space available. This is a 1-day event in which you sign up for interviews between 8 and 10 AM and the individual interviews are conducted between 10:30 AM and 6 PM. Contact: Diane Hellbusch; Diane.Hellbusch@colostate.edu;(970)491-1756",
+            "career_center_link": "http://career.colostate.edu/Employers/FairsAndEvents/CareerFairs.aspx"
+        },
+        {
+            "institution": "University of Colorado Boulder",
+            "fair_name": "Career and Internship Fair",
+            "date": "2014-04-17",
+            "start_end": "9:00 AM",
+            "end_time": "3:00 PM",
+            "location": "University Memorial Center (UMC) 2nd floor",
+            "description": "Employers are required to have open jobs or internships to fill before June 30th, 2014. If you have questions or concerns regarding this event, please feel free to contact Michael Deragisch at 303-492-4123.",
+            "career_center_link": "http://careerservices.colorado.edu/public/"
+        },
+        {
+            "institution": "University of Colorado Denver",
+            "fair_name": "SPRING NON-PROFIT AND GOVERNMENT CAREER AND INTERNSHIP FAIR",
+            "date": "2014-04-23",
+            "start_end": "2:00 PM",
+            "end_time": "5:00 PM",
+            "location": "Gates Field House at the Ritchie Center",
+            "description": null,
+            "career_center_link": "http://www.ucdenver.edu/life/services/careercenter/events/Pages/Events.aspx"
+        },
+        {
+            "institution": "Community College of Aurora",
+            "fair_name": "CCA's Spring 2014 Career Expo!",
+            "date": "2014-04-24",
+            "start_end": "11:00 AM",
+            "end_time": "2:00 PM",
+            "location": "CCA Lowry Campus, West Quad Building",
+            "description": null,
+            "career_center_link": "http://www.ccaurora.edu/business-community/employer-connections"
+        },
+        {
+            "institution": "Pikes Peak Community College",
+            "fair_name": "PPWFC Spring Job Fair (18+)",
+            "date": "2014-04-24",
+            "start_end": "11:00 AM",
+            "end_time": "3:30 PM",
+            "location": "Hotel ElegantÃ© Conference and Event Center. 2886 S Circle Dr, Colorado Springs, CO, 80906",
+            "description": null,
+            "career_center_link": "https://www.ppcc.edu/advising/career-planning/"
+        },
+        {
+            "institution": "University of Colorado Denver",
+            "fair_name": "MyWorkster's Recruit Denver Alumni Only Career Expo",
+            "date": "2014-06-18",
+            "start_end": "11:00 AM",
+            "end_time": "3:00 PM",
+            "location": "Marriot DTC",
+            "description": "Contact Kelly Grunther: kelly@myworkster.com or (917) 841 2657",
+            "career_center_link": "http://www.eventbrite.com/e/myworksters-recruit-denver-alumni-only-career-expo-tickets-9396492161"
+        }
+    ],
+    "num_rows": 10
+}
