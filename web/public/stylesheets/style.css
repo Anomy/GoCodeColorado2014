@@ -6,7 +6,6 @@ body {
 a {
   color: #00B7FF;
 }
-
 #mainSearch {
   display: inline-block;
   width: 75%;
@@ -15,4 +14,40 @@ a {
 
 body > div.form-group > button {
   width: 100px;
+
+div.search {
+	margin-top: 20px;
+	text-align: center;
+	width: 100%;
+}
+button.btn.search-btn {
+	width: 100%;
+}
+.btn-group > .btn-group {
+	width: 50%;
+}
+button.btn.btn-default:active, button.btn.btn-default:hover, button.btn.btn-default:focus {
+	background-color: #3276b1;
+}
+div.image {
+	float:left;
+	width: 30%;
+	min-width: 150px;
+}
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
 }
