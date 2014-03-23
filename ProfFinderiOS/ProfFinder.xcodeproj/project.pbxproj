@@ -67,6 +67,7 @@
 		897A1E2318DE39F100E0D7D9 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 897A1E1118DE39F100E0D7D9 /* UIRefreshControl+AFNetworking.m */; };
 		897A1E2418DE39F100E0D7D9 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 897A1E1318DE39F100E0D7D9 /* UIWebView+AFNetworking.m */; };
 		89A35F1D18DF4E2E00C7B546 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A35F1C18DF4E2E00C7B546 /* WebViewController.m */; };
+		89A35F1F18DF695400C7B546 /* scholarsearch.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A35F1E18DF695400C7B546 /* scholarsearch.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,6 +181,7 @@
 		897A1E1318DE39F100E0D7D9 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		89A35F1B18DF4E2E00C7B546 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewController.h; path = ProfFinder/WebViewController.h; sourceTree = SOURCE_ROOT; };
 		89A35F1C18DF4E2E00C7B546 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = ProfFinder/WebViewController.m; sourceTree = SOURCE_ROOT; };
+		89A35F1E18DF695400C7B546 /* scholarsearch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scholarsearch.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -354,6 +356,7 @@
 		89618A6418DDF45100CF9F62 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				89A35F1E18DF695400C7B546 /* scholarsearch.png */,
 				895A81DD18DE7EB5003F739C /* career-fair-1.png */,
 				895A81DE18DE7EB5003F739C /* career-fair-2.png */,
 				895A81DF18DE7EB5003F739C /* career-fair-3.png */,
@@ -521,6 +524,7 @@
 				89618A6618DDF45100CF9F62 /* Go-Co.png in Resources */,
 				89618A4018DDF0F700CF9F62 /* Main_iPhone.storyboard in Resources */,
 				89618A3718DDF0F700CF9F62 /* InfoPlist.strings in Resources */,
+				89A35F1F18DF695400C7B546 /* scholarsearch.png in Resources */,
 				895A81E418DE7EB5003F739C /* career-fair-1.png in Resources */,
 				897A1DED18DE329600E0D7D9 /* profile-pic-default.png in Resources */,
 				895A81E818DE7EB5003F739C /* career-fair-5.png in Resources */,
