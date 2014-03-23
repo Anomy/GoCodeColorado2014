@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+//@class SearchRequest;
+@class SearchResults;
+
 @interface SearchViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
++ (void) loadFromURL: (NSURL*) url callback:(void (^)(UIImage *image))callback;
+
+@property (nonatomic, strong) SearchResults *facultyData;
+@property (nonatomic, strong) SearchResults *fairData;
+@property (nonatomic, strong) SearchResults *selectedData;
 
 @end
