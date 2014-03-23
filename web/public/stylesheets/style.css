@@ -6,3 +6,13 @@ body {
 a {
   color: #00B7FF;
 }
+
+#mainSearch {
+  display: inline-block;
+  width: 75%;
+  margin: 1em;
+}
+
+body > div.form-group > button {
+  width: 100px;
+}
