@@ -3,11 +3,51 @@
  * Module dependencies.
  */
 
+// includes/requires
+var dl = require('datalanche');
 var express = require('express');
 var routes = require('./routes');
 var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
+
+var client = new dl.Client({
+    key: 'xTf3fPTITSmWkgykP6+skA==',
+    secret: 'kM6A+tQGT4CoyDW1XrOSWQ=='
+});
+
+function search(searchText, callback) {
+    var q = new dl.Query('rpedela.gocodecolorado');
+
+    q.select([ 
+                  "id",
+                  "name",
+                  "department",
+                  "profile_url",
+                  "profile_img_url",
+                  "_es_highlights"
+        ]);
+
+    q.from("cu_faculty_profiles");
+    q.search(searchText);
+    q.offset(0);
+    q.limit(10);
+
+    client.query(q, function(err, result) {
+        return callback(err, result);
+    });
+}
+
+function getSearchResults(req, res, next) {
+    // search(req, function(err, result) {
+    // if (err) {
+    //     console.log(err);
+    // } else {
+    //     console.log(JSON.stringify(result, null, 4));
+    // }
+// });
+    console.log(req);
+}
 
 var app = express();
 
@@ -31,6 +71,7 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 app.get('/users', user.list);
+app.post('/search/', getSearchResults);
 
 app.post('/getfairs', routes.getfairs);
 app.post('/institution', routes.institution);
