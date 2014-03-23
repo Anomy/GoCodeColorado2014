@@ -1,7 +1,7 @@
 $(function(){
 	$('#careerfairs').on('click', function(e){
 		e.preventDefault();
-
+		$('#mainSearch').closest('div').remove();
 		$.post('/getfairs', function(data){
 			console.log('Data: ', data.data.rows)
 			for(var i=0; i < data.data.rows.length; i++){
@@ -27,6 +27,7 @@ $(function(){
 			}
 		})
 	})
+
 
 	$(document).on('click', '.institution', function(e){
 		e.preventDefault();
