@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AFNetworking.h"
 
 @interface SearchResultsManager : NSObject
 @property (nonatomic, strong) NSMutableArray *searchResults;

@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Allison Wonderland Games. All rights reserved.
 //
 
-#import "SearchResultsManager.h"
+#import "SearchRequest.h"
 #import "BaseSearchResultModel.h"
 
 #define KEY @"rUSj3bjkSrqPIpFybPammQ=="
@@ -15,57 +15,20 @@
 #define API_URL @"https://api.datalanche.com/rpedela.gocodecolorado/query"
 #define LIMIT 10
 
-//rpedela.gocodecolorado/query
-
-
-
-@implementation SearchResultsManager
+@implementation SearchRequest
 
 - (id) init {
     self = [super init];
     if (self) {
-        _searchResults = [[NSMutableArray alloc] initWithCapacity:0];
-        for (int i = 0; i<5; i++) {
-            BaseSearchResultModel *model = [[BaseSearchResultModel alloc] initWithDict:nil];
-            [_searchResults addObject:model];
-        }
-        
+        _parsedSearchResults = [[SearchResults alloc] init];
         [self jsonTapped:nil];
     }
     return self;
 }
 
 
-- (void)jsonTapped:(id)sender
-{
-    /*
-     
-     This is an example using curl to do a search. Having limit set to a reasonable number is very important. Without it, it will find all search results which could take minutes. Otherwise it should be a 1-2 seconds or less.
-     
-     curl "https://api.datalanche.com/rpedela.gocodecolorado/query" \
-     -X POST \
-     -u "API_KEY:API_SECRET" \
-     -H "Content-Type: application/json" \
-     -d '{
-     "select": [
-     "id",
-     "name",
-     "department",
-     "profile_url",
-     "profile_img_url",
-     ],
-     "from": "cu_faculty_profiles",
-     "search": "reduced pressure",
-     "offset": 0,
-     "limit": 10
-     }'
-     
-     
-     */
-//    // reset downloadData
-//    downloadData = [[NSMutableData alloc] init];
-//    NSString *urlString = [NSString stringWithFormat:@"%@/%@.json?security_token=%@", BASE_URL, [[self class] resourceCollectionName], [[SecKeyWrapper sharedWrapper] iTriageToken]];
-    
+- (void) jsonTapped:(id)sender
+{    
     NSString *params = [self getSerializedDict];
     NSData *postData = [params dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     
@@ -73,8 +36,6 @@
     [request setURL:[NSURL URLWithString:API_URL]];
     [request setHTTPMethod:@"POST"];
     //Authorization: Basic BASE_64_ENCODE(API_KEY:API_SECRET)
-
-    
     NSMutableString *authString = (NSMutableString*)[@"" stringByAppendingFormat:@"%@:%@", KEY, SECRET];
     NSString *encodedAuthData = [self base64Encode:[authString dataUsingEncoding:NSUTF8StringEncoding]];
     NSString *authHeader = [@"Basic " stringByAppendingFormat:@"%@", encodedAuthData];
@@ -95,6 +56,16 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
     NSLog(@"DATA:%@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+    NSError *error;
+    NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data options: kNilOptions error:&error];
+    NSArray *rows = [json objectForKey:@"rows"];
+    NSMutableArray *tempMutableRows = [[NSMutableArray alloc] initWithCapacity:0];
+    for (NSDictionary *dict in rows) {
+        SingleRow *aRow = [[SingleRow alloc] initWithDict:dict];
+        [tempMutableRows addObject:aRow];
+    }
+    self.parsedSearchResults.rows = tempMutableRows;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"SearchResultsUpdated" object:self];
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
@@ -115,12 +86,13 @@
     [select addObject:@"department"];
     [select addObject:@"profile_url"];
     [select addObject:@"profile_img_url"];
+    [select addObject:@"_es_highlights"];
 
     [dict setObject:select forKey:@"select"];
     [dict setObject:@"cu_faculty_profiles" forKey:@"from"];
     [dict setObject:@"reduced pressure" forKey:@"search"];
     [dict setObject:[NSNumber numberWithInt:0] forKey:@"offset"];
-    [dict setObject:[NSNumber numberWithInt:10] forKey:@"limit"];
+    [dict setObject:[NSNumber numberWithInt:LIMIT] forKey:@"limit"];
     
     return dict;
 }
@@ -174,4 +146,55 @@ static char *alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012
     return result;
 }
 
+@end
+
+
+@implementation SearchResults
+
+-(id) init {
+    self = [super init];
+    if (self) {
+
+    }
+    return self;
+}
+
+@end
+
+@implementation SingleRow
+-(id) initWithDict:(NSDictionary*)dict {
+    self = [super init];
+    if (self) {
+        _id = [self safeObjectForKey:dict withKey:@"id"];
+        _name = [self safeObjectForKey:dict withKey:@"name"];
+        _department = [self safeObjectForKey:dict withKey:@"department"];
+        _profile_url = [self safeObjectForKey:dict withKey:@"profile_url"];
+        _profile_img_url = [self safeObjectForKey:dict withKey:@"profile_img_url"];
+        if ([dict objectForKey:@"_es_highlights"]) {
+            NSDictionary *hilights = [dict objectForKey:@"_es_highlights"];
+            NSArray *profileContent = [hilights objectForKey:@"profile_content"];
+            if (hilights) {
+                NSMutableString *trimString = [NSMutableString stringWithString:[profileContent firstObject]];
+                [trimString replaceOccurrencesOfString:@"<strong>" withString:@"" options:0 range:NSMakeRange(0, [trimString length])];
+                [trimString replaceOccurrencesOfString:@"</strong>" withString:@"" options:0 range:NSMakeRange(0, [trimString length])];
+                _es_highlights = [[NSAttributedString alloc] initWithString:trimString];
+            }
+        }
+    }
+    return self;
+}
+
+-(NSString*) safeObjectForKey:(NSDictionary*) dict withKey:(NSString*)key {
+    if (key) {
+        if ([[dict objectForKey:key] isKindOfClass:[NSString class]]) {
+            NSString *string = [dict objectForKey:key];
+            if (string) {
+                if (string.length > 0) {
+                    return string;
+                }
+            }
+        }
+    }
+    return nil;
+}
 @end

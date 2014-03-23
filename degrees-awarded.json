@@ -1,0 +1,810 @@
+{
+    "rows": [
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Vocational Rehabilitation Counseling/Counselor",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Vocational Rehabilitation Counseling/Counselor",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Speech-Language Pathology/Pathologist",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Speech-Language Pathology/Pathologist",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Special Education and Teaching, General",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Special Education and Teaching, General",
+            "degree_level": "Doctoral",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Special Education and Teaching, General",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Spanish Language and Literature",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Sociology",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Sociology",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Social Sciences, General",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Social Sciences, General",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Sign Language Interpretation and Translation",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "School Psychology",
+            "degree_level": "Specialist",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "School Psychology",
+            "degree_level": "Doctoral",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Rehabilitation and Therapeutic Professions, Other",
+            "degree_level": "Doctoral",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Rehabilitation and Therapeutic Professions, Other",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Registered Nursing/Registered Nurse",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing, Other",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Reading Teacher Education",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Reading Teacher Education",
+            "degree_level": "Doctoral",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Public Health Education and Promotion",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Public Health Education and Promotion",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Psychology, General",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Psychology, General",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Political Science and Government, General",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Physics, General",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Physical Education Teaching and Coaching",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Physical Education Teaching and Coaching",
+            "degree_level": "Doctoral",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Philosophy",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Parks, Recreation and Leisure Facilities Management, General",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Nutrition Sciences",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Nursing Science",
+            "degree_level": "Doctoral",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Music Teacher Education",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Music Teacher Education",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Music, General",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Music, General",
+            "degree_level": "Doctoral",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Music, General",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Multi-/Interdisciplinary Studies, Other",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Multi-/Interdisciplinary Studies, Other",
+            "degree_level": "Doctoral",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Multi-/Interdisciplinary Studies, Other",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Mathematics, General",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Mathematics, General",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Mathematics and Statistics, Other",
+            "degree_level": "Doctoral",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Kinesiology and Exercise Science",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Kinesiology and Exercise Science",
+            "degree_level": "Doctoral",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Kinesiology and Exercise Science",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "International/Global Studies",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Human Services, General",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "History, General",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "History, General",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Higher Education/Higher Education Administration",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Higher Education/Higher Education Administration",
+            "degree_level": "Doctoral",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Health Services/Allied Health/Health Sciences, General",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Health/Health Care Administration/Management",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "German Language and Literature",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Geology/Earth Science, General",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Geology/Earth Science, General",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Geography",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "French Language and Literature",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Foreign Languages and Literatures, General",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Foreign Languages and Literatures, General",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Fine/Studio Arts, General",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Fine/Studio Arts, General",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "English Language and Literature, General",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "English Language and Literature, General",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Elementary Education and Teaching",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Elementary Education and Teaching",
+            "degree_level": "Doctoral",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Education, Other",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Education, Other",
+            "degree_level": "Doctoral",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Education, General",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Educational Statistics and Research Methods",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Educational Statistics and Research Methods",
+            "degree_level": "Doctoral",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Educational Psychology",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Educational Psychology",
+            "degree_level": "Doctoral",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Educational Leadership and Administration, General",
+            "degree_level": "Specialist",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Educational Leadership and Administration, General",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Educational Leadership and Administration, General",
+            "degree_level": "Doctoral",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Educational/Instructional Technology",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Economics, General",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Early Childhood Education and Teaching",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Dramatic/Theatre Arts and Stagecraft, Other",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Drama and Dramatics/Theatre Arts, General",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Drama and Dramatics/Theatre Arts, General",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Dietetics/Dietitian",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Criminal Justice/Safety Studies",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Criminal Justice/Safety Studies",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Counselor Education/School Counseling and Guidance Services",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Counselor Education/School Counseling and Guidance Services",
+            "degree_level": "Doctoral",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Counseling Psychology",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Counseling Psychology",
+            "degree_level": "Doctoral",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "College Student Counseling and Personnel Services",
+            "degree_level": "Doctoral",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Clinical Laboratory Science/Medical Technology/Technologist",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Chemistry, Other",
+            "degree_level": "Doctoral",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Chemistry, General",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Chemistry, General",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Business Administration and Management, General",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Biomedical Sciences, General",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Biology/Biological Sciences, General",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Biology/Biological Sciences, General",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Biological and Biomedical Sciences, Other",
+            "degree_level": "Doctoral",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Audiology/Audiologist and Speech-Language Pathology/Pathologist",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Audiology/Audiologist",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Audiology/Audiologist",
+            "degree_level": "Doctoral",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Audiology/Audiologist",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Art/Art Studies, General",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Art/Art Studies, General",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Anthropology",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Adult Development and Aging",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Adult Development and Aging",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "Accounting",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "",
+            "degree_level": "Specialist",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "",
+            "degree_level": "Masters",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "",
+            "degree_level": "Doctoral",
+            "student_level": "Graduate"
+        },
+        {
+            "institution": "University of Northern Colorado",
+            "rank": 9,
+            "program_name": "",
+            "degree_level": "Bachelor",
+            "student_level": "Undergraduate"
+        }
+    ],
+    "num_rows": 115
+}
