@@ -23,6 +23,5 @@
 @property (nonatomic, strong) NSString *websiteURL;
 
 - (id)initWithDict:(NSDictionary*) dict;
-+ (void) loadFromURL: (NSURL*) url callback:(void (^)(UIImage *image))callback;
 
 @end
