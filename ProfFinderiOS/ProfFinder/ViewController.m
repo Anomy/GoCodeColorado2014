@@ -54,7 +54,13 @@
 }
 
 - (IBAction) loginButtonPressed:(id)sender {
-    if ([UserDefaults getShouldStoreUsername]) {
+    /*if (self.usernameTextField.text.length <= 0) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"ERROR" message:@"Please Enter an Email" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    } else if (self.passwordTextField.text.length <= 0) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"ERROR" message:@"Please Enter a Password" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    } else*/ if ([UserDefaults getShouldStoreUsername]) {
         [UserDefaults setUserStoredEmail:self.usernameTextField.text];
     }
     else {

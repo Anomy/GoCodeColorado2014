@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="Go-Co.png" translatesAutoresizingMaskIntoConstraints="NO" id="Oy8-4H-4fY">
-                                <rect key="frame" x="20" y="106" width="728" height="231"/>
+                                <rect key="frame" x="20" y="146" width="728" height="231"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yv-Sc-QSw">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yv-Sc-QSw">
                                 <rect key="frame" x="49" y="404" width="206" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -80,6 +80,13 @@
                                     <segue destination="Fm9-aI-kco" kind="push" id="kCw-4y-znh"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SCHOLAR SEARCH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lib-sZ-hyH">
+                                <rect key="frame" x="178" y="96" width="413" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -273,9 +280,7 @@
                             <constraint firstItem="6QB-q0-Fqj" firstAttribute="top" secondItem="RCd-Ly-vhf" secondAttribute="top" id="ho7-xa-80Z"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Search" id="Ujh-5g-XqP">
-                        <barButtonItem key="backBarButtonItem" title="Log Out" id="C9F-Fu-xqh"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Search" id="Ujh-5g-XqP"/>
                     <connections>
                         <outlet property="searchBar" destination="ADv-3d-OkV" id="lMd-a9-JAO"/>
                         <outlet property="segmentedControl" destination="qtZ-IE-SS8" id="SAm-Vd-dfp"/>

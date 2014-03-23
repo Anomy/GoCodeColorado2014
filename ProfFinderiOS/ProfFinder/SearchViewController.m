@@ -78,6 +78,7 @@ typedef enum {
 -(void) reload {
 //    [self.tableView reloadData];
     [self segementedControllerValueChanged: nil];
+    [self.searchBar resignFirstResponder];
 }
 
 #pragma mark - Segmented Controller
@@ -200,9 +201,11 @@ typedef enum {
     SingleRow *row = [self.selectedData.rows objectAtIndex:path.row];
     WebViewController *webViewController = (WebViewController*)segue.destinationViewController;
     if (row.career_center_link) {
-        [webViewController loadWebViewWithURL: row.career_center_link];
+        webViewController.url = row.career_center_link;
+        webViewController.screenTitle = row.fair_name;
     } else if (row.profile_url){
-        [webViewController loadWebViewWithURL: row.profile_url];
+        webViewController.url =row.profile_url;
+        webViewController.screenTitle = row.name;
     } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sorry" message:@"No profile was available" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];

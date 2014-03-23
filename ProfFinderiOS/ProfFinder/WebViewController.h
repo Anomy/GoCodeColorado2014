@@ -10,5 +10,6 @@
 
 @interface WebViewController : UIViewController
 @property (nonatomic, strong) NSString *url;
-- (void) loadWebViewWithURL:(NSString*)webURL;
+@property (nonatomic, strong) NSString *screenTitle;
+
 @end

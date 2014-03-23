@@ -30,16 +30,14 @@
     NSURL *url = [NSURL URLWithString:self.url];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:requestObj];
+    
+    self.navigationController.title = self.screenTitle;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void) loadWebViewWithURL:(NSString*)webURL {
-    self.url = webURL;
 }
 
 /*
