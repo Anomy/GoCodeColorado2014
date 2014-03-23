@@ -20,10 +20,24 @@ button.btn.search-btn {
 button.btn.btn-default:active, button.btn.btn-default:hover, button.btn.btn-default:focus {
 	background-color: #3276b1;
 }
+div.fair {
+	margin: 5px;
+}
 div.image {
 	float:left;
-	width: 30%;
-	min-width: 150px;
+	width: 50%;
+}
+.image img {
+	width: 200px;
+	height: 150px;
+	margin: 0 auto;
+}
+div.info {
+	float: right;
+	width: 50%;
+}
+div.info h3 {
+	margin-top:0;
 }
 .cf:before,
 .cf:after {
