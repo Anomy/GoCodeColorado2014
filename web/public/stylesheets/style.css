@@ -7,13 +7,17 @@ a {
   color: #00B7FF;
 }
 #mainSearch {
-  display: inline-block;
-  width: 75%;
-  margin: 1em;
+  display: block;
+  width: 80%;
+  margin: 1em auto;
+  margin-top: 0em;
 }
 
-body > div.form-group > button {
-  width: 100px;
+#mainSubmit {
+  width: 30%;
+  margin: 0 auto;
+  display: block;
+}
 
 div.search {
 	margin-top: 20px;
