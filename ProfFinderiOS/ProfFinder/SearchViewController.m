@@ -151,6 +151,16 @@ typedef enum {
             
             UILabel *departmentLabel = (UILabel *)[cell viewWithTag:DEPARTMENT_LABEL];
             departmentLabel.text = aResult.institution;
+
+            UILabel *locationLabel = (UILabel *)[cell viewWithTag:FAIR_LOCATION_LABEL];
+            locationLabel.text = aResult.location;
+
+            UILabel *fairDateLabel = (UILabel *)[cell viewWithTag:FAIR_DATE_LABEL];
+            fairDateLabel.text = aResult.date;
+
+            UILabel *fairTimeLabel = (UILabel *)[cell viewWithTag:FAIR_TIME_LABEL];
+            fairTimeLabel.text = [NSString stringWithFormat:@"%@ - %@", aResult.start_end, aResult.end_time];
+
             
             UITextView *textView = (UITextView*)[cell viewWithTag:HIGHLIGHT_TEXT_FIELD];
             textView.text = aResult.es_highlights;
