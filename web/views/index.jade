@@ -2,7 +2,13 @@ extends layout
 
 block content
 
-  .container
-      | Scholar Search is an ah-mazing tool for connecting businesses
-      | with scholars in their local community.
+  div.container
+      div.btn-group.btn-group-justified.search
+          div.btn-group#faculty-srch
+              button.btn.btn-default.search-btn(type='button') Faculty Search
+          div.btn-group#careerfairs
+              button.btn.btn-default.search-btn(type='button') Career Fairs
+  div.container
+      div#search-content
+       
 
