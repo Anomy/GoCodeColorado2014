@@ -5,7 +5,7 @@ $(function(){
 		$.post('/getfairs', function(data){
 			console.log('Data: ', data.data.rows)
 			for(var i=0; i < data.data.rows.length; i++){
-				var fair = $('<div class="fair clearfix"></div>');
+				var fair = $('<div class="fair cf"></div>');
 				var image = $('<div class="image"><img src="/images/career-fair-' + i + '.png"></div>');
 				var info = $('<div class="info"></div>');
 				var name = $('<h3 class="name">' + data.data.rows[i].fair_name + '</h3>');
