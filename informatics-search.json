@@ -1,0 +1,66 @@
+{
+    "rows": [
+        {
+            "id": "72fac227-5420-4264-8a65-3bb1fc089cef",
+            "name": "Robert P. Guralnick",
+            "department": "Ecology & Evolutionary Biology (EBIO)",
+            "profile_url": "http://ebio.colorado.edu/index.php/people-faculty?view=employee&id=18",
+            "profile_img_url": "http://ebio.colorado.edu/media/com_workforce/employees/guralnick150x175_1320865871.jpg",
+            "_es_highlights": {
+                "profile_content": [
+                    "Our particular <strong>informatics</strong>\ninteres is building web-based tools so that anyone may access, visualize and\nanalyze legacy and current biodiversity distribution and environmental data.",
+                    "Because so much of the work in lab uses primary species and population\noccurrence data (when and where species and populations occur) available from\nnatural history collections, we are very involved in ecological and\nbiodiversity <strong>informatics</strong> initiatives to increase the quality, availability and\nutility of such datasets at the global scale."
+                ]
+            }
+        },
+        {
+            "id": "dd00abc9-6107-44db-a5ca-b22f0425a26c",
+            "name": "James H. Martin",
+            "department": "Computer Science",
+            "profile_url": "http://www.colorado.edu/cs/users/martin",
+            "profile_img_url": "https://www.colorado.edu/cs/sites/default/files/styles/medium/public/pictures/picture-145-1349905017.jpg",
+            "_es_highlights": {
+                "profile_content": [
+                    "Practical applications of this work are being\napplied in the domains of medical <strong>informatics</strong>, crisis <strong>informatics</strong> and\neducational technology.\n\n### Education\n\nBS, Columbia University; PhD, University of California, Berkeley\n\n### Biography\n\nJim Martin is a professor of Computer Science and a fellow in the Institute of\nCognitive Science at the University of Colorado Boulder."
+                ]
+            }
+        },
+        {
+            "id": "db5d2999-3a26-4549-8e8f-aadc21247d31",
+            "name": "William Emery",
+            "department": "Aerospace Engineering Sciences",
+            "profile_url": "http://www.colorado.edu/aerospace/people/william-emery",
+            "profile_img_url": "http://www.colorado.edu/aerospace/sites/default/files/styles/grid-4/public/people/Emery_William.jpg?itok=4vuXBZ42",
+            "_es_highlights": {
+                "profile_content": [
+                    "., Physical Oceanography, University of Hawaii, 1975\n\nB.S. cum laude, Mechanical Engineering, Brigham Young University, 1971\n\n## Professional Experience\n\n1987-present, Professor, Colorado Center for Astrodynamics Research,\nUniversity of Colorado\n\nJune 2006, Adjunct Professor in <strong>Informatics</strong>, Tor Vergata Univ., Rome\n\n1978-1986, Associate Professor, Oceanography, University of British Columbia\n\n1976-1978, Assistant Professor, Texas A&M University\n\n## Awards (selected)\n\nIEEE Denver Section PACE Chair 2008-2011\n\nElected IEEE Denver Chapter Chair of Geoscience and Rem."
+                ]
+            }
+        },
+        {
+            "id": "567f7bd1-2305-4b8e-aaf8-95f78eb02ce5",
+            "name": "Kenneth Anderson",
+            "department": "Computer Science",
+            "profile_url": "http://www.colorado.edu/cs/users/kena",
+            "profile_img_url": "https://www.colorado.edu/cs/sites/default/files/styles/medium/public/pictures/picture-27-1351015802.jpg",
+            "_es_highlights": {
+                "profile_content": [
+                    "He is currently working on projects related to crisis\n<strong>informatics</strong>, software architecture, scientific workflow, scientific data\nmanagment, Web application frameworks and REST-based Web services.\n\n### Education\n\nBS, MS, PhD, University of California, Irvine\n\n### Biography\n\nKenneth M."
+                ]
+            }
+        },
+        {
+            "id": "8cd689a0-884b-4b67-ba1a-f58890e1b6e2",
+            "name": "William Old",
+            "department": "Chemistry & Biochemistry",
+            "profile_url": "http://chem.colorado.edu/index.php?option=com_content&view=article&id=502catid=41:faculty&Itemid=93",
+            "profile_img_url": "http://chem.colorado.edu/images/stories/FacultyImages/old-w-small.jpg",
+            "_es_highlights": {
+                "profile_content": [
+                    "., and Hunter, L. (2004)\nProteomic <strong>informatics</strong>."
+                ]
+            }
+        }
+    ],
+    "num_rows": 5
+}
