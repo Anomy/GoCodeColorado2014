@@ -20,13 +20,13 @@ function search(searchText, callback) {
     var q = new dl.Query('rpedela.gocodecolorado');
 
     q.select([ 
-                  "id",
-                  "name",
-                  "department",
-                  "profile_url",
-                  "profile_img_url",
-                  "_es_highlights"
-        ]);
+        "id",
+        "name",
+        "department",
+        "profile_url",
+        "profile_img_url",
+        "_es_highlights"
+    ]);
 
     q.from("cu_faculty_profiles");
     q.search(searchText);
@@ -39,17 +39,17 @@ function search(searchText, callback) {
 }
 
 function getSearchResults(req, res, next) {
+
     search(req.body.searchText, function(err, result) {
-    if (err) {
-        console.log(err);
-    } else {
-        console.log(JSON.stringify(result, null, 4));
-    }
+        if (err) {
+            return next(err);
+        }
+
         return res.render("index", {
-          searchResults: result.data
+            searchResults: result.data,
+            searchText: req.body.searchText,
         });
-});
-   
+    });
 }
 
 var app = express();

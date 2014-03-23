@@ -2,33 +2,39 @@ extends layout
 
 block content
 
-  div.container
-      div.btn-group.btn-group-justified.search
-          div.btn-group#faculty-srch
-              button.btn.btn-default.search-btn(type='button') Scholar Search
-          div.btn-group#careerfairs
-              button.btn.btn-default.search-btn(type='button') Upcoming Career Fairs
-  div.container
-      div#search-content
-      div#more-search-content
-       
+    div.container
+        div.btn-group.btn-group-justified.search
+            div.btn-group#faculty-srch
+                button.btn.btn-default.search-btn(type='button') Scholar Search
+            div.btn-group#careerfairs
+                button.btn.btn-default.search-btn(type='button') Upcoming Career Fairs
+    div.container
+        div#search-content
+        div#more-search-content
 
-  .container
-      form(role='form', action='/search', method="POST")
-        .form-group
-          label(for='')
-          input#mainSearch.form-control(type='text', placeholder='Enter Dream Scholar', name="searchText")
-          button#mainSubmit.btn.btn-default.btn-lg.search-btn(type='submit') Search
-      div
-        -if (searchResults)
-          - for (var i = 0; i < searchResults.num_rows; ++i)
-            p #{searchResults.rows[i].name}
-            p #{searchResults.rows[i].department}
-            p #{searchResults.rows[i].profile_url}
-            p #{searchResults.rows[i].profile_img_url}
-
-
-
-
-//- how do you change it so that it will print the name of each row? 
+    div.container
+        div.row
+            br
+            div.text-center
+                form.form-inline(action='/search', method="POST")
+                    div.form-group
+                        label.sr-only
+                        -if (!searchText)
+                            input.form-control(type='text', placeholder='Search', name="searchText", style="width: 500px")
+                        -else
+                            input.form-control(type='text', placeholder='Search', name="searchText", style="width: 500px", value="#{searchText}")
+                    div.form-group.pull-right(style="position: relative; top: -53px; left: -265px")
+                        button.btn.btn-default.btn-lg(type='submit') Search
+        div.row
+            -if (searchResults)
+                table
+                    - for (var i = 0; i < searchResults.num_rows; i++)
+                        tr
+                            td(style="padding-bottom: 32px")
+                                img(src="#{searchResults.rows[i].profile_img_url}", alt="", width="50px", height="50px")
+                            td(style="padding-left: 32px; padding-bottom: 32px")
+                                h3
+                                    a(href="#{searchResults.rows[i].profile_url}") #{searchResults.rows[i].name}
+                                h5 #{searchResults.rows[i].department}
+                                p #{searchResults.rows[i]._es_highlights.profile_content}
 
