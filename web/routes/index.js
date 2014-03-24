@@ -1,11 +1,10 @@
-
 /*
  * GET home page.
  */
 var dl = require('datalanche');
 var client = new dl.Client({
-	key: 'l9umNDiaQAe7oLnidLgGcw==',
-	secret: '8OEtau8PS2OQEcVSwPGuNw=='
+	key: '',
+	secret: ''
 });
 
 
