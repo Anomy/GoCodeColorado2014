@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -12,8 +11,8 @@ var http = require('http');
 var path = require('path');
 
 var client = new dl.Client({
-    key: 'xTf3fPTITSmWkgykP6+skA==',
-    secret: 'kM6A+tQGT4CoyDW1XrOSWQ=='
+    key: '',
+    secret: ''
 });
 
 function search(searchText, callback) {
